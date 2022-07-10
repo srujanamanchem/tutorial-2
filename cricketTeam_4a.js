@@ -74,7 +74,7 @@ app.post("/players/", async (request, response) => {
   response.send("Player Added to Team");
 });
 
-app.put("players/:playerId/", async (request, response) => {
+app.put("/players/:playerId/", async (request, response) => {
   const { playerName, jerseyNumber, role } = request.body;
   const { playerId } = request.params;
   const updatePlayerQuery = `
